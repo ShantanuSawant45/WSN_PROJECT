@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0e17;
+  color: #e8eaf6;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f1525;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232e4a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3a5c;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-700/50 backdrop-blur-xl border border-surface-500/30 rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-accent-cyan/30 hover:shadow-lg hover:shadow-accent-cyan/5;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .status-normal {
+    @apply status-badge bg-accent-green/10 text-accent-green border border-accent-green/20;
+  }
+
+  .status-faulty {
+    @apply status-badge bg-accent-red/10 text-accent-red border border-accent-red/20 animate-pulse-slow;
+  }
+
+  .stat-value {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  .stat-label {
+    @apply text-xs font-medium text-text-secondary uppercase tracking-wider;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold text-text-primary;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-text-primary;
+  }
+}
+
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
+
+.page-enter {
+  animation: fadeIn 0.4s ease-out, slideUp 0.4s ease-out;
+}

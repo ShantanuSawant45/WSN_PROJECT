@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+backend/venv/
+
+# Build output
+dist/
+build/
+
+# Environment & secrets
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+
+# Django
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
+
+# ML model artifacts
+backend/ml_models/
+*.joblib
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp files
+clean_comments.py
